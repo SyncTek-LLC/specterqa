@@ -23,11 +23,11 @@ jobs:
             const pr = context.payload.pull_request;
             const sha = pr.head.sha;
             const required = [
-              'PR Governance Gates / governance-gates',
-              'CI / Lint',
-              'CI / Test (Python 3.10)',
-              'CI / Test (Python 3.11)',
-              'CI / Test (Python 3.12)'
+              'governance-gates',
+              'Lint',
+              'Test (Python 3.10)',
+              'Test (Python 3.11)',
+              'Test (Python 3.12)'
             ];
 
             const checks = await github.paginate(github.rest.checks.listForRef, {
